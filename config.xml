@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>shtsplashcategories</name>
+	<displayName><![CDATA[Sht splash categories]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Afficher les categories]]></description>
+	<author><![CDATA[SHT]]></author>
+	<tab><![CDATA[front_office_features]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

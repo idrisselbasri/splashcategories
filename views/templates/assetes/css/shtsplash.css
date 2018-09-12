@@ -1,0 +1,245 @@
+
+    /* don't display the checkbox */
+.full-chk {
+  display: none;
+}
+
+
+/* container object for the hamburger */
+.full-cntr {
+  top :15px;
+  position: fixed;
+  width: 38px;
+  height: 28px;
+  bottom: 8px;
+  left: 7px;
+  /*border: 1px solid black;*/
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 2px 0px black;
+  z-index: 300;
+  cursor: pointer;
+}
+
+
+.full-img {
+    top: 15px;
+    position: fixed;
+    width: 15%;
+    /*height: 28px;*/
+    bottom: 8px;
+    /* left: 15px; */
+    z-index: 300;
+    cursor: pointer;
+}
+
+
+.full-chk:checked + .full-cntr {
+  background-color: #009fab;
+  border-color: #ffffff;
+}
+
+  @media (min-width: 550px) {
+    .full-cntr {
+      top: 8px;
+    }
+  }
+
+
+/* spans are the cntr that turn from a hamburger to an x */
+.full-span {
+  position: absolute;
+  left: 4px;
+  width: 30px;
+  height: 3px;
+  background-color: black;
+  z-index: 300;
+  transform: rotate(0deg);
+  transform-origin: left center;
+
+  transition: background-color 0.3s ease-out 0s,
+    opacity 0.3s ease-out 0.1s,
+    transform 0.2s ease-out 0s,
+    width 0.2s ease-out 0s,
+    left 0.2s ease-out 0s;
+}
+
+.full-chk:checked + .full-cntr > .full-span {
+  background-color: #ffffff;
+}
+
+.full-span:nth-child(1) {
+  top: 4px;
+}
+
+.full-chk:checked + .full-cntr > .full-span:nth-child(1) {
+  transform: rotate(45deg);
+  width: 23px;
+  left: 11px;
+}
+
+.full-span:nth-child(2) {
+  top: 12px;
+}
+
+.full-chk:checked + .full-cntr > .full-span:nth-child(2) {
+  opacity: 0;
+  width: 30px;
+  
+  transition: opacity 0.1s ease-out 0s;
+}
+
+.full-span:nth-child(3) {
+  top: 20px;
+}
+
+.full-chk:checked + .full-cntr > .full-span:nth-child(3) {
+  transform: rotate(-45deg);
+  width: 23px;
+  left: 11px;
+}
+
+
+/* style for a nav element, the full-screen menu  */
+.full-nav-sht {
+  position: fixed;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  background-color: #009fab;
+  opacity: 0;
+  z-index: -1;
+
+  transition: opacity 0.3s ease-out 0s,
+    z-index 0s ease-out 0.3s;
+}
+
+.full-chk:checked ~ .full-nav-sht {
+  opacity: 1;
+  z-index: 200;
+
+  transition: opacity 0.3s ease-out 0s;
+}
+
+
+/* unordered list inside nav element or .full-nav-sht */
+/* make position relative to help vertically align menu */
+.full-nav-sht-ul {
+  position: relative;
+  height: 100%;
+  margin: 0px auto 0px auto;
+  padding: 0px;
+  list-style-type: none;
+}
+
+
+/* for vertically aligning our menu */
+.full-nav-sht-cntr {
+  position: absolute;
+  top: 48%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  transform: translate(0%, -50%);
+}
+
+
+/* give the mouse cursor a signal */
+.full-nav-sht-hltd {
+  padding: 5px 10px 5px 10px;
+
+}
+
+.full-nav-sht-hltd:hover {
+  background-color: #08737b;
+}
+
+
+/* undecorate links */
+.full-nav-sht-a, .full-nav-sht-a:visited, .full-nav-sht-a:active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+
+/* link text inside .full-nav-sht-li */
+.full-nav-sht-p {
+  margin: 10px 0px 10px 0px;
+  padding: 5px 0px 5px 0px;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+  @media (min-width: 700px) and (min-height: 450px) {
+    .full-nav-sht-p {
+      font-size: 26px;
+    }
+  
+
+  }
+
+@media (min-width:480px)  { 
+
+  .pol ul li{
+
+    width: 50%;
+  }
+ }
+
+
+ .pol ul {
+    padding: 0;
+    /*margin: 45px 0 0;*/
+        /*margin-top: 15%;*/
+}
+.pol ul li{
+  background: red;
+  /*margin: 3px;*/
+  margin: 5px 5px;
+    /*min-width: 100px;*/
+    width: 25%;
+    /*max-width: 308px; */
+    display: inline-block;
+}
+.pol ul li img{
+  margin: 5px 5px;
+    width: 100px;
+    height: 100px;
+    /*display: block;*/
+    /*height: auto;*/
+    /*width: 100%;*/
+}
+.pol ul li h5{
+  margin: 10px 10px;
+  color: white;
+}
+      .flex-container {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    
+   .flex-item {
+    width: 1024px;
+       text-align: center;
+        margin: auto;
+    }
